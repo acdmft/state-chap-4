@@ -3,8 +3,10 @@ import React from "react";
 class Box extends React.Component {
   render() {
     let rangeInput;
-    if (this.props.icon !== 'local_drink') {
-      rangeInput = <input type="range"></input>;
+    if (this.props.icon !== "local_drink") {
+      rangeInput = (
+        <input type="range" steps="1" min={this.props.min} max={this.props.max} onInput={this.props.onInput}></input>
+      );
     } else {
       rangeInput = null;
     }
