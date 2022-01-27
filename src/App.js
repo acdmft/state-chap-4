@@ -25,19 +25,9 @@ class App extends React.Component {
     };
   }
 
-  renderIndicators() {
-    return (
-      <div className="row">
-        <p>Heart: {heartMin}</p>
-        <p>Temperature: {tempMin}</p>
-        <p>Steps: {stepsMin}</p>
-      </div>
-    );
-  }
   render() {
     return (
       <div className="container-fluid">
-        {this.renderIndicators()}
         <div className="row">
           <Box icon="local_drink" color="#3A85FF" value={1.5} unit="L" />
           <Box icon="directions_walk" color="black" value={3000} unit="steps" />
